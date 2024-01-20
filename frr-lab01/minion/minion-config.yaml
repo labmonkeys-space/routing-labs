@@ -2,7 +2,7 @@
 http-url: "http://localhost:8980/opennms"
 broker-url: "failover:tcp://localhost:61616"
 id: "clab-minion-01"
-location: "containerlab"
+location: "clab-frr-lab01"
 
 karaf:
   shell:
