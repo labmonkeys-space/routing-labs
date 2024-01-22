@@ -10,7 +10,7 @@ volumes:
 
 services:
   database:
-    image: postgres:15
+    image: timescale/timescaledb:latest-pg15
     environment:
       TZ: Europe/Berlin
       POSTGRES_HOST: database
