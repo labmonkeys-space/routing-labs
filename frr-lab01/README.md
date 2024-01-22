@@ -20,17 +20,32 @@
 
 ## Cheatsheet
 
-Spinup the topology, setting routes on the PC's and disable LLDP on the management networks on eth0
+### 🏗️ Spinup the topology, setting routes on the PC's and disable LLDP on the management networks on eth0
 ```
 ./run.sh
 ```
 
-Start a web server and give the URL with a given IP instead of 0.0.0.0
+### 🗺️ Start a web server and give the URL with a given IP instead of 0.0.0.0
 ```
 clab graph -s <ip>:50080
 ```
 
-Destroy the whole topology
+### 🧨 Destroy the whole topology
 ```
 clab destroy
+```
+
+### 🕹️ Deploy nodes in OpenNMS
+```
+cd opennms
+./deploy.sh
+```
+
+**💁‍ Note:** The deploy.sh script has the following defaults set, adjust accordingly:
+
+```
+OPENNMS_HOST=localhost
+OPENNMS_USER=admin
+OPENNMS_PASS=admin
+OPENNMS_PORT=8980
 ```

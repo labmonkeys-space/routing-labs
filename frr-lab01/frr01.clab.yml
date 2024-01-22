@@ -8,52 +8,59 @@ topology:
     router1:
       kind: linux
       mgmt-ipv4: 172.20.20.32
-      image: quay.io/labmonkeys/frrouting:9.1.b2886
+      image: quay.io/labmonkeys/frrouting:9.1.b3053
       binds:
         - router1/daemons:/etc/frr/daemons
         - router1/frr.conf:/etc/frr/frr.conf
+        - router1/pmacctd.conf:/etc/pmacctd.conf
     router2:
       kind: linux
       mgmt-ipv4: 172.20.20.33
-      image: quay.io/labmonkeys/frrouting:9.1.b2886
+      image: quay.io/labmonkeys/frrouting:9.1.b3053
       binds:
         - router2/daemons:/etc/frr/daemons
         - router2/frr.conf:/etc/frr/frr.conf
+        - router2/pmacctd.conf:/etc/pmacctd.conf
     router3:
       kind: linux
       mgmt-ipv4: 172.20.20.34
-      image: quay.io/labmonkeys/frrouting:9.1.b2886
+      image: quay.io/labmonkeys/frrouting:9.1.b3053
       binds:
         - router3/daemons:/etc/frr/daemons
         - router3/frr.conf:/etc/frr/frr.conf
+        - router3/pmacctd.conf:/etc/pmacctd.conf
     router4:
       kind: linux
       mgmt-ipv4: 172.20.20.35
-      image: quay.io/labmonkeys/frrouting:9.1.b2886
+      image: quay.io/labmonkeys/frrouting:9.1.b3053
       binds:
         - router4/daemons:/etc/frr/daemons
         - router4/frr.conf:/etc/frr/frr.conf
+        - router4/pmacctd.conf:/etc/pmacctd.conf
     router5:
       kind: linux
       mgmt-ipv4: 172.20.20.36
-      image: quay.io/labmonkeys/frrouting:9.1.b2886
+      image: quay.io/labmonkeys/frrouting:9.1.b3053
       binds:
         - router5/daemons:/etc/frr/daemons
         - router5/frr.conf:/etc/frr/frr.conf
+        - router5/pmacctd.conf:/etc/pmacctd.conf
     router6:
       kind: linux
       mgmt-ipv4: 172.20.20.37
-      image: quay.io/labmonkeys/frrouting:9.1.b2886
+      image: quay.io/labmonkeys/frrouting:9.1.b3053
       binds:
         - router6/daemons:/etc/frr/daemons
         - router6/frr.conf:/etc/frr/frr.conf
+        - router6/pmacctd.conf:/etc/pmacctd.conf
     router7:
       kind: linux
       mgmt-ipv4: 172.20.20.38
-      image: quay.io/labmonkeys/frrouting:9.1.b2886
+      image: quay.io/labmonkeys/frrouting:9.1.b3053
       binds:
         - router7/daemons:/etc/frr/daemons
         - router7/frr.conf:/etc/frr/frr.conf
+        - router7/pmacctd.conf:/etc/pmacctd.conf
     pc1:
       kind: linux
       mgmt-ipv4: 172.20.20.128
