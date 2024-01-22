@@ -1,72 +1,90 @@
 name: frr01
 
+mgmt:
+  network: fixedips
+
 topology:
   nodes:
     router1:
       kind: linux
+      mgmt-ipv4: 172.20.20.32
       image: quay.io/labmonkeys/frrouting:9.1.b2886
       binds:
         - router1/daemons:/etc/frr/daemons
         - router1/frr.conf:/etc/frr/frr.conf
     router2:
       kind: linux
+      mgmt-ipv4: 172.20.20.33
       image: quay.io/labmonkeys/frrouting:9.1.b2886
       binds:
         - router2/daemons:/etc/frr/daemons
         - router2/frr.conf:/etc/frr/frr.conf
     router3:
       kind: linux
+      mgmt-ipv4: 172.20.20.34
       image: quay.io/labmonkeys/frrouting:9.1.b2886
       binds:
         - router3/daemons:/etc/frr/daemons
         - router3/frr.conf:/etc/frr/frr.conf
     router4:
       kind: linux
+      mgmt-ipv4: 172.20.20.35
       image: quay.io/labmonkeys/frrouting:9.1.b2886
       binds:
         - router4/daemons:/etc/frr/daemons
         - router4/frr.conf:/etc/frr/frr.conf
     router5:
       kind: linux
+      mgmt-ipv4: 172.20.20.36
       image: quay.io/labmonkeys/frrouting:9.1.b2886
       binds:
         - router5/daemons:/etc/frr/daemons
         - router5/frr.conf:/etc/frr/frr.conf
     router6:
       kind: linux
+      mgmt-ipv4: 172.20.20.37
       image: quay.io/labmonkeys/frrouting:9.1.b2886
       binds:
         - router6/daemons:/etc/frr/daemons
         - router6/frr.conf:/etc/frr/frr.conf
     router7:
       kind: linux
+      mgmt-ipv4: 172.20.20.38
       image: quay.io/labmonkeys/frrouting:9.1.b2886
       binds:
         - router7/daemons:/etc/frr/daemons
         - router7/frr.conf:/etc/frr/frr.conf
     pc1:
       kind: linux
+      mgmt-ipv4: 172.20.20.128
       image: praqma/network-multitool:latest
     pc2:
       kind: linux
+      mgmt-ipv4: 172.20.20.129
       image: praqma/network-multitool:latest
     pc3:
       kind: linux
+      mgmt-ipv4: 172.20.20.130
       image: praqma/network-multitool:latest
     pc4:
       kind: linux
+      mgmt-ipv4: 172.20.20.131
       image: praqma/network-multitool:latest
     pc5:
       kind: linux
+      mgmt-ipv4: 172.20.20.132
       image: praqma/network-multitool:latest
     pc6:
       kind: linux
+      mgmt-ipv4: 172.20.20.133
       image: praqma/network-multitool:latest
     pc7:
       kind: linux
+      mgmt-ipv4: 172.20.20.134
       image: praqma/network-multitool:latest
     minion:
       kind: linux
+      mgmt-ipv4: 172.20.20.64
       image: opennms/minion:32.0.6
       binds:
         - minion/minion-config.yaml:/opt/minion/minion-config.yaml
