@@ -95,7 +95,7 @@ topology:
       image: opennms/minion:32.0.6
       binds:
         - minion/minion-config.yaml:/opt/minion/minion-config.yaml
-        - minion/org.opennms.features.telemetry.listeners-bmp-11019.cfg:/opt/minion-etc-overlay/org.opennms.features.telemetry.listeners-bmp-11019.cfg
+        - minion/etc:/opt/minion-etc-overlay
       publish:
         - tcp/8201
   links:

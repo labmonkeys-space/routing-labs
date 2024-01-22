@@ -41,7 +41,8 @@ datasources:
     secureJsonData:
       password: postgres
     jsonData:
-      postgresVersion: 1200
+      postgresVersion: 1500
       sslmode: disable
       tlsAuth: false
       tlsSkipVerify: true
+      timescaledb: true
