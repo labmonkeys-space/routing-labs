@@ -1,0 +1,41 @@
+name: ceos01
+
+mgmt:
+  network: fixedips
+
+topology:
+  nodes:
+    router1:
+      kind: ceos
+      startup-config: router1.cfg
+      mgmt-ipv4: 172.20.20.32
+      image: ceos64:4.31.1F
+    router2:
+      kind: ceos
+      startup-config: router2.cfg
+      mgmt-ipv4: 172.20.20.33
+      image: ceos64:4.31.1F
+    router3:
+      kind: ceos
+      startup-config: router3.cfg
+      mgmt-ipv4: 172.20.20.34
+      image: ceos64:4.31.1F
+    pc1:
+      kind: linux
+      mgmt-ipv4: 172.20.20.128
+      image: praqma/network-multitool:latest
+    pc2:
+      kind: linux
+      mgmt-ipv4: 172.20.20.129
+      image: praqma/network-multitool:latest
+    pc3:
+      kind: linux
+      mgmt-ipv4: 172.20.20.130
+      image: praqma/network-multitool:latest
+  links:
+    - endpoints: ["router1:eth1", "router2:eth1"]
+    - endpoints: ["router1:eth2", "router3:eth1"]
+    - endpoints: ["router2:eth2", "router3:eth2"]
+    - endpoints: ["pc1:eth1", "router1:eth3"]
+    - endpoints: ["pc2:eth1", "router2:eth3"]
+    - endpoints: ["pc3:eth1", "router3:eth3"]
