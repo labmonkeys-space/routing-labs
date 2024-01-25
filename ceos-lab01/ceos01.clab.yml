@@ -9,17 +9,17 @@ topology:
       kind: ceos
       startup-config: router1.cfg
       mgmt-ipv4: 172.20.20.32
-      image: ceos64:4.31.1F
+      image: quay.io/labmonkeys/ceos64:4.31.1F
     router2:
       kind: ceos
       startup-config: router2.cfg
       mgmt-ipv4: 172.20.20.33
-      image: ceos64:4.31.1F
+      image: quay.io/labmonkeys/ceos64:4.31.1F
     router3:
       kind: ceos
       startup-config: router3.cfg
       mgmt-ipv4: 172.20.20.34
-      image: ceos64:4.31.1F
+      image: quay.io/labmonkeys/ceos64:4.31.1F
     pc1:
       kind: linux
       mgmt-ipv4: 172.20.20.128
