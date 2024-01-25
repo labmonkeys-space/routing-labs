@@ -32,6 +32,15 @@ topology:
       kind: linux
       mgmt-ipv4: 172.20.20.130
       image: praqma/network-multitool:latest
+    minion:
+      kind: linux
+      mgmt-ipv4: 172.20.20.64
+      image: opennms/minion:32.0.6
+      binds:
+        - minion/minion-config.yaml:/opt/minion/minion-config.yaml
+        - minion/etc:/opt/minion-etc-overlay
+      publish:
+        - tcp/8201
   links:
     - endpoints: ["router1:eth1", "router2:eth1"]
     - endpoints: ["router1:eth2", "router3:eth1"]
