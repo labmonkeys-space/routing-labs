@@ -10,31 +10,37 @@ topology:
       startup-config: router1.cfg
       mgmt-ipv4: 172.20.20.32
       image: quay.io/labmonkeys/ceos64:4.31.1F
+      startup-delay: 0
     router2:
       kind: ceos
       startup-config: router2.cfg
       mgmt-ipv4: 172.20.20.33
       image: quay.io/labmonkeys/ceos64:4.31.1F
+      startup-delay: 0
     router3:
       kind: ceos
       startup-config: router3.cfg
       mgmt-ipv4: 172.20.20.34
       image: quay.io/labmonkeys/ceos64:4.31.1F
+      startup-delay: 0
     router4:
       kind: ceos
       startup-config: router4.cfg
       mgmt-ipv4: 172.20.20.35
       image: quay.io/labmonkeys/ceos64:4.31.1F
+      startup-delay: 120
     router5:
       kind: ceos
       startup-config: router5.cfg
       mgmt-ipv4: 172.20.20.36
       image: quay.io/labmonkeys/ceos64:4.31.1F
+      startup-delay: 120
     router6:
       kind: ceos
       startup-config: router6.cfg
       mgmt-ipv4: 172.20.20.37
       image: quay.io/labmonkeys/ceos64:4.31.1F
+      startup-delay: 120
     pc1:
       kind: linux
       mgmt-ipv4: 172.20.20.128
