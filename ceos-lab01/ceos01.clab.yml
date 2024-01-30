@@ -20,6 +20,21 @@ topology:
       startup-config: router3.cfg
       mgmt-ipv4: 172.20.20.34
       image: quay.io/labmonkeys/ceos64:4.31.1F
+    router4:
+      kind: ceos
+      startup-config: router4.cfg
+      mgmt-ipv4: 172.20.20.35
+      image: quay.io/labmonkeys/ceos64:4.31.1F
+    router5:
+      kind: ceos
+      startup-config: router5.cfg
+      mgmt-ipv4: 172.20.20.36
+      image: quay.io/labmonkeys/ceos64:4.31.1F
+    router6:
+      kind: ceos
+      startup-config: router6.cfg
+      mgmt-ipv4: 172.20.20.37
+      image: quay.io/labmonkeys/ceos64:4.31.1F
     pc1:
       kind: linux
       mgmt-ipv4: 172.20.20.128
