@@ -8,7 +8,7 @@ topology:
     router1:
       kind: linux
       mgmt-ipv4: 172.20.20.32
-      image: quay.io/labmonkeys/frrouting:9.1.b3053
+      image: quay.io/labmonkeys/frrouting:10.1.b3304
       binds:
         - router1/daemons:/etc/frr/daemons
         - router1/frr.conf:/etc/frr/frr.conf
@@ -16,7 +16,7 @@ topology:
     router2:
       kind: linux
       mgmt-ipv4: 172.20.20.33
-      image: quay.io/labmonkeys/frrouting:9.1.b3053
+      image: quay.io/labmonkeys/frrouting:10.1.b3304
       binds:
         - router2/daemons:/etc/frr/daemons
         - router2/frr.conf:/etc/frr/frr.conf
@@ -24,7 +24,7 @@ topology:
     router3:
       kind: linux
       mgmt-ipv4: 172.20.20.34
-      image: quay.io/labmonkeys/frrouting:9.1.b3053
+      image: quay.io/labmonkeys/frrouting:10.1.b3304
       binds:
         - router3/daemons:/etc/frr/daemons
         - router3/frr.conf:/etc/frr/frr.conf
@@ -32,7 +32,7 @@ topology:
     router4:
       kind: linux
       mgmt-ipv4: 172.20.20.35
-      image: quay.io/labmonkeys/frrouting:9.1.b3053
+      image: quay.io/labmonkeys/frrouting:10.1.b3304
       binds:
         - router4/daemons:/etc/frr/daemons
         - router4/frr.conf:/etc/frr/frr.conf
@@ -40,7 +40,7 @@ topology:
     router5:
       kind: linux
       mgmt-ipv4: 172.20.20.36
-      image: quay.io/labmonkeys/frrouting:9.1.b3053
+      image: quay.io/labmonkeys/frrouting:10.1.b3304
       binds:
         - router5/daemons:/etc/frr/daemons
         - router5/frr.conf:/etc/frr/frr.conf
@@ -48,7 +48,7 @@ topology:
     router6:
       kind: linux
       mgmt-ipv4: 172.20.20.37
-      image: quay.io/labmonkeys/frrouting:9.1.b3053
+      image: quay.io/labmonkeys/frrouting:10.1.b3304
       binds:
         - router6/daemons:/etc/frr/daemons
         - router6/frr.conf:/etc/frr/frr.conf
@@ -56,7 +56,7 @@ topology:
     router7:
       kind: linux
       mgmt-ipv4: 172.20.20.38
-      image: quay.io/labmonkeys/frrouting:9.1.b3053
+      image: quay.io/labmonkeys/frrouting:10.1.b3304
       binds:
         - router7/daemons:/etc/frr/daemons
         - router7/frr.conf:/etc/frr/frr.conf
@@ -92,7 +92,7 @@ topology:
     minion:
       kind: linux
       mgmt-ipv4: 172.20.20.64
-      image: opennms/minion:32.0.6
+      image: opennms/minion:33.0.8
       binds:
         - minion/minion-config.yaml:/opt/minion/minion-config.yaml
         - minion/etc:/opt/minion-etc-overlay
