@@ -8,21 +8,21 @@ topology:
     router1:
       kind: linux
       mgmt-ipv4: 172.20.20.32
-      image: quay.io/labmonkeys/frrouting:9.1.b3053
+      image: quay.io/labmonkeys/frrouting:10.1.b3304
       binds:
         - router1/daemons:/etc/frr/daemons
         - router1/frr.conf:/etc/frr/frr.conf
     router2:
       kind: linux
       mgmt-ipv4: 172.20.20.33
-      image: quay.io/labmonkeys/frrouting:9.1.b3053
+      image: quay.io/labmonkeys/frrouting:10.1.b3304
       binds:
         - router2/daemons:/etc/frr/daemons
         - router2/frr.conf:/etc/frr/frr.conf
     router3:
       kind: linux
       mgmt-ipv4: 172.20.20.34
-      image: quay.io/labmonkeys/frrouting:9.1.b3053
+      image: quay.io/labmonkeys/frrouting:10.1.b3304
       binds:
         - router3/daemons:/etc/frr/daemons
         - router3/frr.conf:/etc/frr/frr.conf
